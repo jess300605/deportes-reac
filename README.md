@@ -1,36 +1,59 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Proyecto: Plano Interactivo de Mesas
 
-## Getting Started
+## Descripción
+Este proyecto es una interfaz web con react que permite ver los estados de cada cancha y de diferentes deportes, reservar  y ver el total por el uso de las mismas.
 
-First, run the development server:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Funcionalidades implementadas
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+1. Selección de deportes: Fútbol, Baloncesto y Tenis, cada uno con diferente distribución de canchas.
+2. Visualización de canchas: Organizadas en filas y columnas según el deporte.
+3. Estados de las canchas:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+1. Disponible (azul)
+2. Seleccionada (verde)
+3. Reservada (rojo)
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+4. Gestión de reservas:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+1. Selección de cancha
+2. Ajuste de duración (1-5 horas)
+3. Cálculo automático del precio total
+4. Confirmación de reserva
 
-## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+5. Validaciones:
+
+1. No permite reservar canchas ya reservadas
+2. Requiere seleccionar una cancha antes de confirmar
+
+
+## Estructura del proyecto
+deportes-react/
+│
+├── app/
+│   ├── page.jsx                 # Página principal de la aplicación
+│   ├── layout.jsx              # Layout principal
+│   └── globals.css             # Estilos globales
+│
+├── components/
+│   ├── selector-deporte.jsx    # Componente para selección de deportes
+│   ├── plano-deportivo.jsx     # Componente que muestra el plano de canchas
+│   ├── cancha.jsx             # Componente individual de cancha
+│   └── resumen-reserva.jsx    # Componente de resumen y confirmación
+│
+├── public/                     # Archivos públicos estáticos
+│
+├── node_modules/              # Dependencias instaladas
+│
+├── package.json              # Configuración del proyecto y dependencias
+├── package-lock.json        # Versiones exactas de dependencias
+├── .gitignore              # Archivos ignorados por git
+└── README.md               # Documentación del proyecto
+
+
+##Derechos de desarrollo : Jesus Ernesto Sanabria Sibrian
